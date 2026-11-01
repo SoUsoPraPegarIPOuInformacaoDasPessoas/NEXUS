@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS ROYALE | Loja Oficial</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #020817;
+    color: white;
+    overflow: hidden;
+}
+
+/* FUNDO DESFOCADO */
+
+.background {
+    position: fixed;
+    inset: -15px;
+    background:
+        linear-gradient(rgba(0, 5, 20, 0.60),
+                        rgba(0, 5, 20, 0.75)),
+        url("fundo.png");
+
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px);
+    z-index: -1;
+    transform: scale(1.05);
+}
+
+/* PÁGINAS */
+
+.page {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    transition: 0.7s;
+}
+
+#pagina2 {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+/* TÍTULO */
+
+.logo {
+    font-size: clamp(42px, 8vw, 75px);
+    font-weight: 1000;
+    font-style: italic;
+    letter-spacing: 3px;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #9edcff,
+        #168bff,
+        #004b9b
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 0 15px #007bff);
+}
+
+.subtitulo {
+    font-size: 14px;
+    color: #80cfff;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+
+/* BIO */
+
+.bio {
+    margin-top: 35px;
+    max-width: 650px;
+    padding: 25px;
+
+    background: rgba(0, 15, 40, 0.70);
+    border: 1px solid rgba(65, 170, 255, 0.5);
+    border-radius: 15px;
+
+    box-shadow: 0 0 30px rgba(0, 120, 255, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.bio h2 {
+    color: #65bdff;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.bio p {
+    color: #e4f4ff;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* CATEGORIAS */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.categoria {
+    padding: 11px 17px;
+    border-radius: 9px;
+    background: rgba(0, 110, 255, 0.15);
+    border: 1px solid #278fff;
+    color: #c9eaff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* BOTÃO */
+
+.botao {
+    margin-top: 35px;
+    padding: 16px 42px;
+    border-radius: 10px;
+    border: 1px solid white;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #c5eaff,
+        #398fff,
+        #0752a8
+    );
+
+    color: #00152f;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 15px #168bff,
+        inset 0 2px 5px white;
+}
+
+.botao:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #168bff;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 20px;
+    color: #8bbce9;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* SEGUNDA PÁGINA */
+
+#pagina2 h1 {
+    font-size: 55px;
+    color: #64baff;
+    text-shadow: 0 0 20px #007bff;
+}
+
+#pagina2 p {
+    margin-top: 15px;
+    color: #d5eaff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- PÁGINA INICIAL -->
+
+<section class="page" id="pagina1">
+
+    <h1 class="logo">NEXUS ROYALE</h1>
+
+    <p class="subtitulo">
+        ✦ A ELITE DOS JOGOS ✦
+    </p>
+
+    <div class="bio">
+
+        <h2>👑 BEM-VINDO À NEXUS ROYALE!</h2>
+
+        <p>
+            ⚡ Sua experiência começa aqui!
+
+            <br>
+
+            🎮 Um espaço dedicado ao universo gamer,
+            com produtos digitais e novidades.
+
+            <br>
+
+            🔥 Contas de Discord e Blox Fruits.
+
+            <br>
+
+            🍎 Stock de frutas e novidades de Blox Fruits.
+
+            <br>
+
+            💎 Qualidade, organização e transparência
+            em cada atendimento!
+
+            <br><br>
+
+            🏆 <b>NEXUS ROYALE — SUA PRÓXIMA CONQUISTA!</b>
+        </p>
+
+        <div class="categorias">
+
+            <div class="categoria">🎮 DISCORD</div>
+
+            <div class="categoria">⚔️ BLOX FRUITS</div>
+
+            <div class="categoria">🍎 STOCK DE FRUTAS</div>
+
+            <div class="categoria">💎 NOVIDADES</div>
+
+        </div>
+
+    </div>
+
+    <button class="botao" onclick="irPagina2()">
+        ✦ ACESSAR PÁGINA 2 ✦
+    </button>
+
+    <div class="rodape">
+        © 2026 NEXUS ROYALE • TODOS OS DIREITOS RESERVADOS
+    </div>
+
+</section>
+
+
+
+<!-- SEGUNDA PÁGINA -->
+
+<section class="page" id="pagina2">
+
+    <h1 class="logo">NEXUS ROYALE</h1>
+
+    <p class="subtitulo">
+        👑 A MELHOR LOJA DE BLOX FRUITS DO BRASIL 👑
+    </p>
+
+    <div class="bio">
+
+        <h2>🔥 NOSSOS SERVIÇOS</h2>
+
+        <p>
+            ⚔️ <b>CONTAS DE BLOX FRUITS</b>
+            <br>
+            Contas disponíveis para quem busca novas aventuras!
+
+            <br><br>
+
+            💎 <b>CONTAS NITRADAS DE DISCORD</b>
+            <br>
+            Contas com Nitro para quem procura uma experiência diferenciada.
+
+            <br><br>
+
+            🚀 <b>UP DE CONTAS</b>
+            <br>
+            Fazemos o up de contas sem utilização de scripts!
+
+            <br><br>
+
+            💳 <b>CRÉDITOS PARA RECARGA</b>
+            <br>
+            Créditos disponíveis para recarregar e adquirir contas.
+
+            <br><br>
+
+            🍎 <b>STOCK DE FRUTAS</b>
+            <br>
+            Novidades e disponibilidade de frutas de Blox Fruits!
+
+            <br><br>
+
+            🏆 <b>NEXUS ROYALE</b>
+            <br>
+            A melhor loja de Blox Fruits do Brasil!
+        </p>
+
+    </div>
+
+    <button class="botao"
+        onclick="window.open('https://discord.gg/xXwmz9GHz', '_blank')">
+        💙 ENTRAR NO NOSSO DISCORD
+    </button>
+
+    <button class="botao" onclick="voltarPagina1()">
+        ← VOLTAR À PÁGINA INICIAL
+    </button>
+
+    <div class="rodape">
+        © 2026 NEXUS ROYALE • SUA PRÓXIMA CONQUISTA!
+    </div>
+
+</section>
+
+</body>
+</html>
